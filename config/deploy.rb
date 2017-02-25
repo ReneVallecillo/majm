@@ -33,7 +33,7 @@ lock "3.7.2"
 # set :keep_releases, 5
 
 # Change these
-server '138.197.114.205', port: 22 roles: [:web, :app, :db], primary: true
+server '138.197.114.205', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:ReneVallecillo/majm.git'
 set :application,     'MAJM'
