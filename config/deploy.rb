@@ -36,7 +36,7 @@ lock "3.7.2"
 server '138.197.114.205', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:ReneVallecillo/majm.git'
-set :application,     'MAJM'
+set :application,     'majm'
 set :user,            'majm'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
