@@ -38,6 +38,10 @@ gem 'jbuilder', '~> 2.5'
 #auth
 gem 'devise'
 
+#admin
+gem "administrate", "~> 0.3.0"
+gem 'bourbon'
+
 # agregando bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
