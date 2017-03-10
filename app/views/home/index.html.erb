@@ -17,13 +17,24 @@
 <div class="home-block bg-light-green text-white">
     <div class="container">
         <h2>Mantente Informado</h2>
-        <form>
+        <%= form_for(@subscription) do |f| %>
+            <% if @subscription.errors.any? %>
+                <div id="error_explanation">
+                <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this product from being saved:</h2>
+                <ul>
+                <% @subscription.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+                </ul>
+                </div>
+            <% end %>
         <div class="form-group">
-            <label for="exampleInputEmail1">Correo Electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digita tu correo">
+            <%= f.text_field :email, :class => 'form-control', :placeholder => "Digita tu Correo", aria: { describedby: "emailHelp" }%>
             <small id="emailHelp" class="form-text text-muted">Nunca corpartiríamos tu correo con nadie más</small>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+        <div class="actions">
+        <%= f.submit 'Enviar', class: 'btn btn-primary '%>
+        </div>
+        <% end %>
     </div>
 </div>

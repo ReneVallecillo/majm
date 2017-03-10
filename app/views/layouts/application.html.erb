@@ -37,6 +37,11 @@
         </ul>
       </div>
     </nav>
+    <div class="container notices">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      </div>
       <%= yield %>
   </body>
 </html>

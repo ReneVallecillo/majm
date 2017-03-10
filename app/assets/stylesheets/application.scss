@@ -24,5 +24,13 @@ $brand-primary: $primary;
 @import "bootstrap";
 
 body{
-    padding-top: 5em;
+    padding-top: 3.5em;
+}
+
+.notices{
+    // margin-top:-28px;
+    .alert{
+        margin-bottom: 0.4rem;
+        margin-top: 0.4rem;
+    }
 }
